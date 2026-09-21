@@ -4,27 +4,23 @@ import products from '../data/products';
 export default function ProductList() {
   return (
     <div className="container my-5">
-      <h2 className="text-center mb-4 text-white fw-bold">Featured Products</h2>
-      <div className="row g-4">
+      <h3 className="text-center mb-4 text-white fw-bold">Sản Phẩm Mới</h3>
+      <div className="row g-4"> {/* g-4 tạo khoảng cách giữa các ô lớn hơn một chút */}
         {products.map((product) => (
-          <div className="col-md-4 col-sm-6" key={product.id}>
-            <div className="card bg-secondary text-white h-100 shadow-sm border-0">
+          // Đổi col-md-3 thành col-md-4 để hiển thị 3 sản phẩm trên một hàng
+          <div className="col-lg-4 col-md-6 col-sm-6" key={product.id}>
+            <div className="bg-white text-dark p-4 rounded text-center shadow-sm h-100 d-flex flex-column">
               <img 
                 src={product.image} 
-                className="card-img-top" 
                 alt={product.name} 
-                style={{ height: '250px', objectFit: 'cover' }} 
+                className="img-fluid mb-3 rounded" 
+                style={{ height: '200px', objectFit: 'cover' }} 
               />
-              <div className="card-body d-flex flex-column justify-content-between">
-                <div>
-                  <h5 className="card-title fw-bold">{product.name}</h5>
-                  <p className="card-text text-warning fs-5 mb-1">
-                    {product.price.toLocaleString('vi-VN')} VNĐ
-                  </p>
-                  <span className="badge bg-success">{product.status}</span>
-                </div>
-                <button className="btn btn-dark mt-3 w-100">Add to Cart</button>
-              </div>
+              <h5 className="fw-bold mb-2">{product.name}</h5>
+              <p className="text-danger fs-5 fw-semibold mb-3 flex-grow-1">
+                {product.price.toLocaleString('vi-VN')} VNĐ
+              </p>
+              <button className="btn btn-outline-dark w-100 mt-auto">Chọn mua</button>
             </div>
           </div>
         ))}
