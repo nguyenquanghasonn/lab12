@@ -5,9 +5,8 @@ export default function ProductList() {
   return (
     <div className="container my-5">
       <h3 className="text-center mb-4 text-white fw-bold">Sản Phẩm Mới</h3>
-      <div className="row g-4"> {/* g-4 tạo khoảng cách giữa các ô lớn hơn một chút */}
+      <div className="row g-4"> 
         {products.map((product) => (
-          // Đổi col-md-3 thành col-md-4 để hiển thị 3 sản phẩm trên một hàng
           <div className="col-lg-4 col-md-6 col-sm-6" key={product.id}>
             <div className="bg-white text-dark p-4 rounded text-center shadow-sm h-100 d-flex flex-column">
               <img 
