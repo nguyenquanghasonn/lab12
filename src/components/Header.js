@@ -4,7 +4,6 @@ export default function Header() {
   return (
     <header className="bg-dark px-5 py-3 border-bottom border-secondary w-100">
       <div className="container-fluid d-flex align-items-center justify-content-between">
-        {/* Logo bên trái */}
         <div>
           <img 
             src="/Images/logo.jpg" 
@@ -12,8 +11,6 @@ export default function Header() {
             style={{ height: '60px', objectFit: 'contain' }} 
           />
         </div>
-
-        {/* Menu điều hướng (có thêm Women và cách đều nhau) */}
         <nav className="d-flex align-items-center gap-5">
           <a href="#home" className="text-white text-decoration-none fs-5">Home</a>
           <a href="#product" className="text-white text-decoration-none fs-5">Product</a>
